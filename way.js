@@ -1,8 +1,13 @@
 class Way {
 
-    constructor(data) {
+    constructor(way, wayAttributes) {
+        this.id = way.id
+        this.color = wayAttributes.color
+        this.description = wayAttributes.description
+        this.destination =wayAttributes.destination
+        Way.all.push(this);
         debugger
-        this.id = data.id
-
     }
 }
+
+Way.all = [];

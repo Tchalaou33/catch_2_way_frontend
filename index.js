@@ -15,9 +15,8 @@ function getWays() {
     .then(response => response.json())
     .then(ways => {
         ways.data.forEach(way => {
-
-        let newWay = new Way(way)
-
+        let newWay = new Way(way, way.attributes)
+        
          render(way)
       })
     })
