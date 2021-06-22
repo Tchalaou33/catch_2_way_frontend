@@ -15,6 +15,9 @@ function getWays() {
     .then(response => response.json())
     .then(ways => {
         ways.data.forEach(way => {
+
+        let newWay = new Way(way)
+
          render(way)
       })
     })
@@ -31,7 +34,6 @@ function render(way) {
   
     document.querySelector('#way-container').innerHTML += wayMarkup;
 }
-
 
 
 function createFormHandler(e) {
