@@ -16,24 +16,13 @@ function getWays() {
     .then(ways => {
         ways.data.forEach(way => {
         let newWay = new Way(way, way.attributes)
+
+        document.querySelector('#way-container').innerHTML += newWay.renderWayCard()
         
-         render(way)
+        //  render(way)
       })
     })
 }
-
-function render(way) {
-    const wayMarkup = `
-            <div data-id=${way.id}>
-              <h3>${way.attributes.color}</h3>
-              <p>${way.attributes.destination.name}</p>
-              <button data-id=${way.id}>edit</button>
-            </div>
-            <br><br>`;
-  
-    document.querySelector('#way-container').innerHTML += wayMarkup;
-}
-
 
 function createFormHandler(e) {
     e.preventDefault()
@@ -57,6 +46,9 @@ function postFetch(color, description, destination_id) {
         console.log(way);
         const wayData = way.data
         // render JSON response
-        render(wayData)
+        let newWay = new Way(wayData, wayData.attributes
+        document.querySelector('#way-container').innerHTML += newWay.renderWayCard()
+
+        // render(wayData)
     })
 }
