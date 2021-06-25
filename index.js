@@ -53,9 +53,10 @@ function postFetch(color, description, destination_id) {
     })
 }
 
-// function deleteData(color, description, destination_id) {
-//     return fetch(url + '/' + item, {
-//       method: 'delete'
-//     })
-//     .then(response => response.json());
-//   }
+function deleteWay(id) {
+
+    fetch(`${endPoint}/${id}`,  {
+      method: 'delete'
+    })
+    .then(response => response.json());
+  }
