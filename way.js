@@ -14,7 +14,7 @@ class Way {
                 <div data-id=${this.id}>
                   <h3>${this.color}</h3>
                   <p>${this.destination.name}</p>
-                  <button data-id=${this.id}>edit</button>
+                  <button data-id=${this.id} id=""delete-btn" type="button" class="delete-btn">Delete Way</button></button>
                 </div>
                 <br><br>`;
       
