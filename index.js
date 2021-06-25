@@ -67,7 +67,7 @@ function postFetch(color, description, destination_id) {
 function deleteWay(id) {
 
     fetch(`${endPoint}/${id}`,  {
-      method: 'delete'
+      method: "DELETE"
     })
-    .then(response => response.json());
+    .then(response => response.json())
   }
