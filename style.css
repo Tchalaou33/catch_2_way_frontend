@@ -1,0 +1,52 @@
+h1 {
+    color: blueviolet;
+    font-family: 'Neucha';
+}
+
+h3 {
+    color:rgb(59, 50, 80)
+}
+
+strong {
+    color:pink
+}
+
+body {
+    background-color: rgb(248, 205, 217);
+    color: rgb(3, 3, 3);
+    font-family: 'Neucha';
+    line-height: 18px;
+  }
+
+.form-container {
+    color: rgb(78, 78, 85)
+}
+
+#create-way-form {
+    text-align: center;
+    border:3px solid   
+}
+
+#way-container {
+    color: rgb(12, 12, 11)
+}
+
+.submit {
+    border:2px solid rgb(59, 50, 80);
+    border-radius:1px;
+    padding:2px;
+    font-family: 'Neucha';
+    background:linear-gradient(to top,rgb(236, 213, 228),
+    rgb(133, 98, 117));
+    color:rgb(7, 7, 7)
+}
+
+.delete-btn {
+    border:2px solid rgb(59, 50, 80);
+    border-radius:1px;
+    padding:2px;
+    font-family: 'Neucha';
+    background:linear-gradient(to top,rgb(245, 235, 241),
+    rgb(160, 163, 165));
+    color:rgb(13, 12, 14)
+}

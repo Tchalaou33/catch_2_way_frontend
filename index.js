@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     createWayForm.addEventListener("submit", (e) => createFormHandler(e))
 })
 
+document.addEventListener("click", function(e) {
+    const wayCard = document.getElementById(`${e.target.dataset.id}`)
+
+    if(e.target.matches("#delete-btn")) {
+      e.preventDefault()
+      deleteWay(e.target.dataset.id)
+      wayCard.remove(wayCard)
+    }
+})
+
+
 function getWays() {
     fetch(endPoint)
     .then(response => response.json())
@@ -46,7 +57,7 @@ function postFetch(color, description, destination_id) {
         console.log(way);
         const wayData = way.data
         // render JSON response
-        let newWay = new Way(wayData, wayData.attributes
+        let newWay = new Way(wayData, wayData.attributes)
         document.querySelector('#way-container').innerHTML += newWay.renderWayCard()
 
         // render(wayData)
