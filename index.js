@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const createWayForm = document.querySelector("#create-way-form")
 
-    createWayForm.addEventListener("submit", (e) => createFormHandler(e))
+    createWayForm.addEventListener("submit",  createFormHandler)
 })
 
 document.addEventListener("click", function(e) {

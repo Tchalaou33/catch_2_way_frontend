@@ -11,10 +11,10 @@ class Way {
 
     renderWayCard() {
         return`
-                <div data-id=${this.id}>
+                <div id=${this.id}>
                   <h3>${this.color}</h3>
                   <p>${this.destination.name}</p>
-                  <button data-id=${this.id} id=""delete-btn" type="button" class="delete-btn">Delete Way</button></button>
+                  <button data-id=${this.id} id="delete-btn" type="button" class="delete-btn">Delete Way</button>
                 </div>
                 <br><br>`;
       
