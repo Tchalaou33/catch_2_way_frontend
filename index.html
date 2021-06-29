@@ -32,10 +32,25 @@
               <br><br>
           
               <input id= 'create-button' type="submit" name="submit" value="Create a New Way " class="submit">
+             
+              <button>Change Color</button>
+
+                <script>
+
+                  var color = ["green", "pink"]
+                  var i = 0;
+                  document.querySelector("button").addEventListener("click",
+                    function(){
+                      i = i < color.length ? ++i : 0;
+                        document.querySelector("body").style.background = color[i];
+                });
+                  
+                </script>
+
             </form>
           
           </div> 
-        <br><br>
+        <br><br>    
 
 
         <div id="way-container">
